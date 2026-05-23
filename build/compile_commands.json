@@ -1,0 +1,260 @@
+[
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa01.dir\\Cartella-Tappa01\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa01\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa01/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa01.dir/Cartella-Tappa01/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa01.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa01.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa02.dir\\Cartella-Tappa02\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa02\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa02/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa02.dir/Cartella-Tappa02/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa02.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa02.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa03.dir\\Cartella-Tappa03\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa03\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa03/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa03.dir/Cartella-Tappa03/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa03.dir\\Cartella-Tappa03\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa03\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa03/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa03.dir/Cartella-Tappa03/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa03.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa03.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa04.dir\\Cartella-Tappa04\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa04\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa04/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa04.dir/Cartella-Tappa04/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa04.dir\\Cartella-Tappa04\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa04\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa04/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa04.dir/Cartella-Tappa04/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa04.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa04.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa05.dir\\Cartella-Tappa05\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa05\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa05/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa05.dir/Cartella-Tappa05/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa05.dir\\Cartella-Tappa05\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa05\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa05/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa05.dir/Cartella-Tappa05/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa05.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa05.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa06.dir\\Cartella-Tappa06\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa06\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa06/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa06.dir/Cartella-Tappa06/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa06.dir\\Cartella-Tappa06\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa06\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa06/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa06.dir/Cartella-Tappa06/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa06.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa06.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa07.dir\\Cartella-Tappa07\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa07\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa07/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa07.dir/Cartella-Tappa07/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa07.dir\\Cartella-Tappa07\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa07\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa07/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa07.dir/Cartella-Tappa07/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa07.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa07.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa08.dir\\Cartella-Tappa08\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa08\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa08/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa08.dir/Cartella-Tappa08/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa08.dir\\Cartella-Tappa08\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa08\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa08/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa08.dir/Cartella-Tappa08/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa08.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa08.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa09.dir\\Cartella-Tappa09\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa09\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa09/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa09.dir/Cartella-Tappa09/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa09.dir\\Cartella-Tappa09\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa09\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa09/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa09.dir/Cartella-Tappa09/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa09.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa09.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa10.dir\\Cartella-Tappa10\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa10\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa10/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa10.dir/Cartella-Tappa10/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa10.dir\\Cartella-Tappa10\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa10\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa10/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa10.dir/Cartella-Tappa10/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa10.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa10.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa11.dir\\Cartella-Tappa11\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa11\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa11/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa11.dir/Cartella-Tappa11/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa11.dir\\Cartella-Tappa11\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa11\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa11/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa11.dir/Cartella-Tappa11/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa11.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa11.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa12.dir\\Cartella-Tappa12\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa12\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa12/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa12.dir/Cartella-Tappa12/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa12.dir\\Cartella-Tappa12\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa12\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa12/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa12.dir/Cartella-Tappa12/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa12.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa12.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa13.dir\\Cartella-Tappa13\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa13\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa13/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa13.dir/Cartella-Tappa13/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa13.dir\\Cartella-Tappa13\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa13\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa13/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa13.dir/Cartella-Tappa13/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa13.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa13.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa14.dir\\Cartella-Tappa14\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa14\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa14/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa14.dir/Cartella-Tappa14/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa14.dir\\Cartella-Tappa14\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa14\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa14/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa14.dir/Cartella-Tappa14/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa14.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa14.dir/librerie/glad/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa15.dir\\Cartella-Tappa15\\main.cpp.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa15\\main.cpp",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa15/main.cpp",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa15.dir/Cartella-Tappa15/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -std=gnu++17 -o CMakeFiles\\Tappa15.dir\\Cartella-Tappa15\\dem.cc.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\Cartella-Tappa15\\dem.cc",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Cartella-Tappa15/dem.cc",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa15.dir/Cartella-Tappa15/dem.cc.obj"
+},
+{
+  "directory": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/include -IC:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glm -isystem C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/Librerie/SFML/include -g -o CMakeFiles\\Tappa15.dir\\librerie\\glad\\src\\glad.c.obj -c C:\\Users\\andre\\OneDrive\\Desktop\\PROGETTI\\Progetto_FCG\\librerie\\glad\\src\\glad.c",
+  "file": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/librerie/glad/src/glad.c",
+  "output": "C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa15.dir/librerie/glad/src/glad.c.obj"
+}
+]

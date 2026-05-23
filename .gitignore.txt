@@ -1,0 +1,14 @@
+# Ignora la cartella di compilazione
+build/
+
+# Ignora eseguibili e librerie dinamiche locali
+*.exe
+*.dll
+*.o
+*.a
+*.lib
+
+# Ignora cartelle nascoste degli IDE
+.cache/
+.vscode/
+.vs/

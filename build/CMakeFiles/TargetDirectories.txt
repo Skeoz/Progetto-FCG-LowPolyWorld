@@ -1,0 +1,17 @@
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa01.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa02.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa03.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa04.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa05.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa06.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa07.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa08.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa09.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa10.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa11.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa12.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa13.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa14.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/Tappa15.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/edit_cache.dir
+C:/Users/andre/OneDrive/Desktop/PROGETTI/Progetto_FCG/build/CMakeFiles/rebuild_cache.dir
