@@ -58,6 +58,7 @@ glm::vec3 wLightPos = housePos + glm::vec3(0, 0, verticalOffset + 8.0f);
 
 ## Struttura e Flusso Dati (Tappa 12)
 
+```text
 [Fase Inizializzazione] -> Caricamento DEM -> Moltiplicazione Griglia (X,Y * 1000.0f, Z * 0.4f)
                         -> Generazione Chunk 64x64 con Bounding Box AABB aggiornati
                         -> Caricamento Bivacco.obj (Scala fissa = 9.0f)
@@ -70,6 +71,7 @@ glm::vec3 wLightPos = housePos + glm::vec3(0, 0, verticalOffset + 8.0f);
                         -> Estrazione Frustum ed esecuzione Culling dei Chunk fuori campo
                         -> Rendering Terreno (Quota neve = 200.0, Attenuazione Point Light estesa)
                         -> Rendering Bivacco.obj (Ancorato al suolo con verticalOffset = 8.0f)
+```
 
 ## Screenshot
 

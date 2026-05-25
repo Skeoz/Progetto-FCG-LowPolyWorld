@@ -57,7 +57,7 @@ Per validare l'efficacia dell'algoritmo di culling, era necessario quantificare 
 
 ## Struttura della Pipeline Grafica Ottimizzata (Tappa 11)
 
-
+```text
 [Inizializzazione] 
   └── Lettura DEM -> Suddivisione in Griglie 64x64 -> Calcolo Normali e AABB
   └── Generazione Array di Strutture 'Chunk' -> Allocazione N VAO/VBO/EBO induriti
@@ -76,6 +76,7 @@ Per validare l'efficacia dell'algoritmo di culling, era necessario quantificare 
   │
   ├── [Stampa Diagnostica] -> Se Timer >= 1.0s -> std::cout << chunksDrawn / Totale
   └── Rendering Bivacco.obj (In piedi, texturizzato con offset Z = 0.005f)
+```
 
 ## Screenshot
 

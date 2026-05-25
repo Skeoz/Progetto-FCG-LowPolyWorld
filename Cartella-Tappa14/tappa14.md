@@ -8,10 +8,10 @@ Per avviare questa specifica tappa, impostare sia il *Build Target* che il *Laun
 ## Obiettivo
 L'obiettivo della **Tappa 14** è il completamento della pipeline grafica e del sistema di navigazione attraverso l'introduzione della **Nebbia Atmosferica Esponenziale (Depth Fog)** per un realismo visivo profondo, accoppiato a un motore di **collisioni solide tridimensionali** per l'asset del bivacco.
 
-Fino alla tappa precedente, l'orizzonte soffriva di un taglio geometrico netto in corrispondenza del *Far Plane* (fissato a 1500 unità), svelando la natura artificiale della simulazione. Inoltre, la telecamera si comportava come un'entità spettrale in grado di trapassare le pareti e le finestre della struttura poligonale del bivacco. Questa tappa introduce la fusione ottica pixel-cielo basata sulla distanza e la fisica di reazione (push-back) per rendere gli ostacoli volumetricamente impenetrabili.
+Fino alla tappa precedente, l'orizzonte soffriva di un taglio geometrico netto in corrispondenza del *Far Plane* (fissato a 1500 unità), svelando la natura artificiale della simulazione. Inoltre, la telecamera si comportava come un fantasma in grado di trapassare le pareti e le finestre della struttura poligonale del bivacco.
 
 ## Comandi per il Giocatore
-I controlli di navigazione nell'ambiente chilometrico sono stabili e definitivi:
+I controlli di navigazione sono gli stessi:
 * **Mouse**: Orientamento dinamico dello sguardo (Imbardata/Yaw e Beccheggio/Pitch).
 * **W / S / A / D**: Movimento direzionale nello spazio (Velocità fissa a 50.0f unità/secondo).
 * **Spazio / Shift Sinistro**: Movimento verticale lungo l'asse Z. *(Vincolato sia dal suolo che dalla struttura del bivacco).*
@@ -24,10 +24,10 @@ I controlli di navigazione nell'ambiente chilometrico sono stabili e definitivi:
 ## Problematiche Affrontate e Soluzioni Ingegneristiche
 
 ### 1. Il Taglio Netto dell'Orizzonte 
-Con l'espansione della mappa a un chilometro quadrato, la vista prospettica si interrompeva bruscamente a 1500 unità di distanza. Questo creava un distacco visivo innaturale dove le montagne svanivano nel nulla, distruggendo l'immersione fotorealistica del ciclo giorno/notte.
+Con l'espansione della mappa a un chilometro quadrato, la vista prospettica si interrompeva bruscamente a 1500 unità di distanza.
 
 **Soluzione (Depth Fog Esponenziale):**
-È stata implementata un'equazione di nebbia atmosferica esponenziale quadratica all'interno dei Fragment Shader del terreno e del modello OBJ. Lo shader calcola la distanza euclidea esatta tra la telecamera (`viewPos`) e il frammento renderizzato (`FragPos`). Tramite un fattore di densità calibrato (0.0018), il colore nativo del pixel viene miscelato progressivamente con il colore dinamico dell'orizzonte attuale (`fogColor`), facendo sfumare dolcemente i rilievi montuosi remoti nella foschia del cielo:
+È stata implementata un'equazione di nebbia atmosferica esponenziale quadratica all'interno dei Fragment Shader del terreno e del modello OBJ. Lo shader calcola la distanza euclidea esatta tra la telecamera (`viewPos`) e il frammento renderizzato (`FragPos`). Tramite un fattore di densità calibrato (0.0018), il colore nativo del pixel viene miscelato progressivamente con il colore dinamico dell'orizzonte attuale (`fogColor`), facendo sfumare i rilievi montuosi remoti nella foschia del cielo:
 
 float fogDist = length(viewPos - FragPos);
 float fogFactor = exp(-pow(fogDist * fogDensity, 2.0));
@@ -67,6 +67,7 @@ Il motore grafico chiude lo sviluppo stabilizzando i seguenti parametri personal
 
 ## Flusso della Pipeline Grafica
 
+```text
 [Game Loop Principale]
   ├── [Fase 1: Input e Calcolo Spostamenti] -> Aggiornamento coordinate teoriche Cam.X, Cam.Y
   │
@@ -89,6 +90,7 @@ Il motore grafico chiude lo sviluppo stabilizzando i seguenti parametri personal
   └── [Fase 5: Pipeline Rendering 2D (Ortografica)]
         ├── Disattivazione GL_DEPTH_TEST
         └── Render HUD Vettoriale -> Output FPS (accumulati), Fase Giorno, GPS (X,Y,Z) in Ambra
+```
 
 ## Screenshot Progetto
 

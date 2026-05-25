@@ -66,6 +66,7 @@ Mostrare solo l'angolo numerico del sole non era intuitivo per l'utente. C'era b
 
 ## Struttura della Pipeline e Gestione dei Livelli (Tappa 13)
 
+```text
 [Game Loop Principale]
   ├── [Fase 3D - Proiezione Prospettica]
   │     ├── Abilita GL_DEPTH_TEST
@@ -80,7 +81,7 @@ Mostrare solo l'angolo numerico del sole non era intuitivo per l'utente. C'era b
         ├── Generazione dinamica linee tramite Stroke Font Vettoriale
         ├── Upload dei dati nel VBO dinamico tramite GL_DYNAMIC_DRAW
         └── glDrawArrays(GL_LINES) con Colore Ambra Aeronautico
-
+```
 ## Screenshot Progetto
 
 ![L'interfaccia HUD ](screenshot13.png)
