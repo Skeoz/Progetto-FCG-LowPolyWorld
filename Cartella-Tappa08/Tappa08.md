@@ -6,7 +6,7 @@ Per avviare questa specifica tappa, assicurarsi di aver impostato sia il *Build 
 ---
 
 ## Obiettivo
-L'obiettivo di questa tappa era trasformare l'illuminazione statica della scena in un sistema dinamico di tempo atmosferico e temporale realistico. Sganciando il vettore della luce, l'intensità ambientale e i colori del cielo da valori fissi, si è implementato un ciclo giorno/notte completo guidato dal tempo reale di esecuzione. La scheda video calcola l'orbita solare tramite funzioni trigonometriche e interpola in tempo reale una ricca tavolozza cromatico-atmosferica (giorno pieno, golden hour, tramonto/enrosadira, ora blu e notte alpina) sfruttando interpolazioni curvilinee non lineari per garantire la massima morbidezza visiva.
+L'obiettivo di questa tappa era trasformare l'illuminazione statica della scena in un sistema dinamico di tempo realistico. Sganciando il vettore della luce, l'intensità ambientale e i colori del cielo da valori fissi, si è implementato un ciclo giorno/notte completo guidato dal tempo reale di esecuzione. La scheda video calcola l'orbita solare tramite funzioni trigonometriche e interpola in tempo reale una ricca tavolozza cromatico-atmosferica (giorno pieno, golden hour, tramonto/enrosadira, ora blu e notte alpina) sfruttando interpolazioni curvilinee non lineari.
 
 ## Comandi per il Giocatore
 I controlli di navigazione tridimensionale rimangono attivi e ottimizzati. La gestione della velocità o del blocco temporale è predisposta a livello di variabili e verrà esposta in futuro nell'HUD:
@@ -21,7 +21,7 @@ I controlli di navigazione tridimensionale rimangono attivi e ottimizzati. La ge
 
 ---
 
-## Problematica 1: Transizioni Cromatiche Piattelineari e Mancanza di Realismo Atmosferico
+## Problematica 1: Transizioni Cromatiche Piattelineari 
 Nelle prime iterazioni del ciclo, la variazione luminosa risultava sgradevole e artificiale. Il passaggio tra il giorno e la notte ricordava un semplice "interruttore" cromatico o una dissolvenza lineare rigida, priva delle caratteristiche sfumature dei tramonti d'alta quota (come il fenomeno dell'Enrosadira o l'Alpenglow sui ghiacciai).
 
 ### Analisi e Soluzione
@@ -33,10 +33,10 @@ La soluzione ha previsto una ristrutturazione profonda dell'algoritmo nel ciclo 
 ---
 
 ## Problematica 2: Velocità del Ciclo Giorno/Notte Eccessiva (`daySpeed`)
-Nelle primissime run di test, il moltiplicatore che gestiva lo scorrere del tempo globale era impostato su un valore troppo alto. Di conseguenza, il sole "sfrecciava" sulla mappa causando uno sfarfallio nervoso e innaturale delle ombre sui crinali rocciosi. Inoltre, questa eccessiva velocità impediva di apprezzare le delicate transizioni atmosferiche avanzate (come l'Enrosadira o l'ora blu), che duravano a malapena qualche frazione di secondo a schermo.
+Nelle primissime run di test, il moltiplicatore che gestiva lo scorrere del tempo globale era impostato su un valore troppo alto. Di conseguenza, il sole "sfrecciava" sulla mappa causando uno sfarfallio nervoso e innaturale delle ombre sui crinali rocciosi.
 
 ### Analisi e Soluzione
-Per risolvere il problema e stabilizzare l'impatto visivo si è intervenuti sul bilanciamento della simulazione, isolando e riducendo la variabile `daySpeed` a un valore di `0.1f`. Questo tuning ha regolarizzato l'orbita solare, garantendo una progressione luminosa morbida e cinematografica che permette all'osservatore di percepire in modo chiaro l'evoluzione del bioma e la corretta propagazione della luce diffusa.
+Per risolvere il problema e stabilizzare l'impatto visivo si è intervenuti sul bilanciamento della simulazione, isolando e riducendo la variabile `daySpeed` a un valore di `0.1f`. Questo cambiamento ha regolarizzato l'orbita solare, garantendo una progressione luminosa morbida che permette all'osservatore di percepire in modo chiaro l'evoluzione del bioma e la corretta propagazione della luce diffusa.
 
 ---
 
@@ -59,3 +59,5 @@ Questa implementazione consente di congelare istantaneamente l'intera configuraz
 ![Il Ghiacciaio di mattina](screenshot81.png)
 
 ![Il Ghiacciaio di sera](screenshot82.png)
+
+![Il Ghiacciaio alpenglow](screenshot83.png)

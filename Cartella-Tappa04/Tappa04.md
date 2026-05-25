@@ -23,7 +23,7 @@ Il problema è stato risolto ristrutturando la directory in modo rigido e alline
 Progetto_FCG/
 └── librerie/
     └── glm/             <-- Path intercettato da CMake
-        └── glm/         <-- Sottocartella tassativa contenente i file .hpp
+        └── glm/         <-- Sottocartella contenente i file .hpp
             ├── glm.hpp
             └── gtc/
 ```
@@ -53,4 +53,4 @@ Grazie a queste correzioni, il ghiacciaio mantiene le sue proporzioni reali e la
 
 ## Screenshot
 
-![Le Montagne](screenshot4.png)
+![Il ghiacciaio](screenshot4.png)

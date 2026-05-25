@@ -20,14 +20,14 @@ I comandi di volo tridimensionale e di sblocco dell'interfaccia rimangono invari
 
 ---
 
-## Problematica 1: Ottimizzazione del Contrasto Visivo per la Presentazione Accademica
+## Problematica 1: Ottimizzazione del Contrasto Visivo
 Nelle prime build di questa tappa, la soglia di transizione tra il fondovalle (erba) e la mezza costa (roccia) era impostata a una quota molto bassa (`FragPos.z = -0.05`). Di conseguenza, l'estensione del ghiacciaio dell'Aletsch tendeva a presentarsi quasi interamente grigia e bianca, nascondendo l'effetto del gradiente procedurale e rendendo l'impatto complessivo simile a quello della tappa precedente.
 
 ### Analisi e Soluzione
-Per massimizzare il feedback visivo e valorizzare il lavoro algoritmico agli occhi della commissione d'esame, si è optato per una ritaratura strategica delle quote geologiche all'interno del codice GLSL:
+Per massimizzare il feedback visivo e valorizzare il lavoro algoritmico, si è optato per una ritaratura strategica delle quote geologiche all'interno del codice GLSL:
 1. **Innalzamento della soglia:** Il limite massimo del bioma vallivo è stato spinto verso l'alto, spostando il controllo condizionale da `-0.05` a **`0.02`**. In questo modo, il verde risale sensibilmente lungo i costoni e i canaloni laterali.
 2. **Saturazione cromatico-procedurale:** Il vettore `colorValley` è stato potenziato nel canale *Green* (passando da `0.35f` a `0.45f`) per conferirgli maggiore vivacità.
-3. **Morbidezza del gradiente:** I parametri della funzione `smoothstep(-0.2, 0.02, FragPos.z)` sono stati ricalcolati per spalmare la transizione su un dislivello più ampio, garantendo un passaggio naturale e privo di banding tra i prati di fondovalle e le pareti di granito nudo che precedono le nevi perenni.
+3. **Morbidezza del gradiente:** I parametri della funzione `smoothstep(-0.2, 0.02, FragPos.z)` sono stati ricalcolati per spalmare la transizione su un dislivello più ampio, garantendo un passaggio naturale e privo di banding tra i prati di fondovalle e le pareti di granito che precedono le nevi.
 
 ## Screenshot
 

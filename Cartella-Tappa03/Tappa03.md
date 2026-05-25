@@ -13,16 +13,16 @@ Come per la Tappa 02, la scena è statica e non prevede ancora input da parte de
 Una volta avviato il rendering iniziale, l'output a schermo non mostrava una rete geometrica definita, bensì un blocco solido e monocromatico di colore arancione. 
 
 ### Analisi del problema
-Il file DEM originale presenta una risoluzione di $703 \times 703$ vertici. Cercando di mappare l'intera griglia all'interno di una finestra standard di $800 \times 600$ pixel, lo spazio fisico tra un vertice e l'altro si è ridotto all'ordine del singolo pixel. Le linee del wireframe erano talmente fitte e ravvicinate che il monitor e l'occhio umano le fondevano in un'unica massa densa, annullando la percezione dei rilievi e sovraccaricando inutilmente la CPU e la GPU.
+Il file DEM originale presenta una risoluzione di $703 \times 703$ vertici. Cercando di mappare l'intera griglia all'interno di una finestra standard di $800 \times 600$ pixel, lo spazio fisico tra un vertice e l'altro si è ridotto all'ordine del singolo pixel. Le linee del wireframe erano talmente fitte e ravvicinate che il monitor e l'occhio le fondevano in un'unica massa densa, annullando la percezione dei rilievi e sovraccaricando inutilmente la CPU e la GPU.
 
 ## Soluzione Adottata: Level of Detail (LOD) tramite Sfoltimento
 Per risolvere il problema dell'eccesso di densità e rendere visibile la struttura geometrica della montagna, si è applicato il concetto di **LOD (Level of Detail)** direttamente in fase di campionamento:
 
 1. **Passo di campionamento (`step = 10`):** Invece di leggere ogni singolo vertice del file `.asc`, i cicli di generazione della mesh saltano i punti intermedi, leggendo ed elaborando **un solo vertice ogni 10**.
 2. **Ricalcolo della griglia:** Il numero di colonne e righe effettive è stato ridotto dinamicamente tramite la formula:
-   <div style="text-align:center; margin:1em 0; font-size:1.1em;"><span class="math" style="font-family: 'Times New Roman', serif; font-style: italic; font-weight: bold;">cols = (W + step − 1) / step</span></div>
-   <div style="text-align:center; margin:1em 0; font-size:1.1em;"><span class="math" style="font-family: 'Times New Roman', serif; font-style: italic; font-weight: bold;">rows = (H + step − 1) / step</span></div>
-3. **Risultato:** La mesh risultante è diventata leggermente più "Low-Poly", riducendo drasticamente il numero di poligoni. Questo ha permesso di separare nettamente le linee del wireframe, rivelando l'andamento tridimensionale di valli e picchi e ottimizzando le prestazioni di calcolo.
+   `int cols = (W + step - 1) / step;`
+   `int rows = (H + step - 1) / step;`
+3. **Risultato:** La mesh risultante è diventata leggermente più "Low-Poly", riducendo drasticamente il numero di poligoni. Questo ha permesso di separare nettamente le linee del wireframe, rivelando l'andamento tridimensionale di valli e picchi.
 
 ## Screenshot
 ![Lettura Dati](screenshot3.png)

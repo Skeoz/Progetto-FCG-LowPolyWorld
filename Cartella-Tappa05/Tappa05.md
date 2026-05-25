@@ -6,7 +6,7 @@ Per avviare questa specifica tappa, assicurarsi di aver impostato sia il *Build 
 ---
 
 ## Obiettivo
-L'obiettivo di questa tappa era implementare un sistema di navigazione 3D interattivo. Attraverso l'uso delle matrici di trasformazione, si è fornita all'utente la possibilità di esplorare la mesh altimetrica muovendosi liberamente con la tastiera (traslazione su 3 assi) e orientando lo sguardo con il mouse (imbardata e beccheggio). Come da specifica architetturale, l'asse di rollio è stato bloccato per simulare un comportamento da "drone" e prevenire capovolgimenti irrealistici.
+L'obiettivo di questa tappa era implementare un sistema di navigazione 3D interattivo. Attraverso l'uso delle matrici di trasformazione, si è fornita all'utente la possibilità di esplorare la mesh altimetrica muovendosi liberamente con la tastiera (traslazione su 3 assi) e orientando lo sguardo con il mouse. Come da specifica architetturale, l'asse di rollio è stato bloccato per simulare un comportamento da "drone" e prevenire capovolgimenti irrealistici.
 
 ## Comandi per il Giocatore
 A differenza delle tappe precedenti, la scena è ora completamente esplorabile in tempo reale. I comandi a disposizione sono:
