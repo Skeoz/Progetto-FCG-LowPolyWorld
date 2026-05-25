@@ -8,10 +8,10 @@ Per avviare questa specifica tappa, impostare sia il *Build Target* che il *Laun
 ## Obiettivo
 L'obiettivo della **Tappa 10** è l'estensione dell'architettura del motore grafico per supportare asset tridimensionali  creati esternamente (tramite software di modellazione come Blender), eliminando i limiti delle geometrie rigide cablate direttamente nel codice. 
 
-Nello specifico, è stato integrato un modello di un bivacco d'alta quota in formato Wavefront `.obj`, completato dalla mappatura di una texture bidimensionale `.png`. L'ambiente è stato reso interattivo introducendo una **Luce Puntiforme (Point Light)** calda che emana dalle finestre della struttura durante la fase notturna del ciclo giorno/notte, completando la resa visiva con una gestione completamente adattiva dello schermo intero.
+Nello specifico, è stato integrato un modello di un bivacco in formato Wavefront `.obj`, completato dalla mappatura di una texture bidimensionale `.png`. L'ambiente è stato reso interattivo introducendo una **Luce Puntiforme (Point Light)** calda che emana dalle finestre della struttura durante la fase notturna del ciclo giorno/notte.
 
 ## Comandi per il Giocatore
-I controlli di volo e gestione della simulazione sono stabili e consolidati:
+I controlli di volo e gestione della simulazione sono gli stessi:
 * **Mouse**: Rotazione della telecamera (Imbardata/Yaw e Beccheggio/Pitch).
 * **W / S / A / D**: Movimento direzionale nello spazio (Stile Drone).
 * **Spazio / Shift Sinistro**: Traslazione verticale assoluta (Su/Giù).
@@ -23,14 +23,13 @@ I controlli di volo e gestione della simulazione sono stabili e consolidati:
 
 ## Problematiche Affrontate e Soluzioni Ingegneristiche
 
-### 1. Il Collo di Bottiglia dell'I/O sul Disco (CPU Spikes e Rallentamenti)
-Nelle prime iterazioni dell'importazione dell'OBJ, la funzione di parsing del file (`loadOBJ`) era stata inclusa all'interno del Game Loop principale. Questo causava la rilettura sequenziale, la decodifica testuale delle stringhe e la riallocazione dei buffer sulla GPU per 60 volte al secondo. Le conseguenze immediate erano vistosi cali di framerate (stuttering) e un carico termico anomalo sulla CPU.
-
+### 1. Overload dell'I/O sul Disco (CPU Spikes e Rallentamenti)
+Nelle prime iterazioni dell'importazione dell'OBJ, la funzione di parsing del file (`loadOBJ`) era stata inclusa all'interno del Game Loop principale. Questo causava la rilettura sequenziale, la decodifica testuale delle stringhe e la riallocazione dei buffer sulla GPU per 60 volte al secondo. Le conseguenze immediate erano vistosi cali di framerate (stuttering).
 **Soluzione:**
 Si è applicato il principio di separazione delle fasi del ciclo di vita del software. Il caricamento del file `.obj` tramite la funzione ottimizzata con `reserve()` e il caricamento della texture tramite `sf::Image` sono stati spostati rigidamente nella **fase di inizializzazione *una tantum***, prima dell'apertura formale della finestra e del loop di rendering. La GPU ora mantiene i dati residenti in memoria nei rispettivi VAO e ID Texture, riducendo l'overhead di CPU a zero durante l'esecuzione.
 
-### 2. Disallineamento dei Sistemi di Coordinate (Modello Sottosopra o Coricato)
-I software di modellazione 3D standard (Blender, Maya) esportano spesso i modelli impostando l'asse **Y** come vettore verticale orientato verso l'alto. Il nostro motore grafico, ereditando la convenzione GIS dei dati DEM, utilizza invece l'asse **Z** come coordinata d'altezza. All'importazione grezza, il bivacco si presentava ruotato o capovolto all'interno del terreno.
+### 2. Disallineamento dei Sistemi di Coordinate (Modello Coricato)
+I software di modellazione 3D standard esportano spesso i modelli impostando l'asse **Y** come vettore verticale orientato verso l'alto. Il nostro motore grafico, ereditando la convenzione GIS dei dati DEM, utilizza invece l'asse **Z** come coordinata d'altezza. All'importazione grezza, il bivacco si presentava ruotato o capovolto all'interno del terreno.
 
 **Soluzione:**
 È stata introdotta una trasformazione algebrica correttiva sulla matrice di modello (`houseModel`). Applicando una rotazione di +90 gradi sull'asse X tramite le librerie GLM, l'asse verticale nativo del modello è stato riallineato con l'asse Z della scena:

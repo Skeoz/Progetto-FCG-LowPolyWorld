@@ -8,7 +8,7 @@ Per avviare questa specifica tappa, impostare sia il *Build Target* che il *Laun
 ## Obiettivo
 L'obiettivo della **Tappa 11** è stato l'abbattimento radicale del carico computazionale sulla GPU tramite l'implementazione del **Frustum Culling** geometrico assistito da un'architettura a **Chunk** (tassellazione del terreno). 
 
-Fino alla tappa precedente, l'intero ghiacciaio DEM veniva inviato alla pipeline grafica come un unico blocco monolitico, costringendo la scheda video a calcolare trasformazioni e illuminazione anche per milioni di poligoni situati alle spalle della telecamera o fuori dal campo visivo. Questa tappa introduce la scomposizione del mondo in sottomatrici indipendenti e lo scarto preventivo a livello CPU degli elementi non visibili.
+Fino alla tappa precedente, l'intero ghiacciaio DEM veniva inviato alla pipeline grafica come un unico blocco, costringendo la scheda video a calcolare trasformazioni e illuminazione anche per milioni di poligoni situati alle spalle della telecamera o fuori dal campo visivo. Questa tappa introduce la scomposizione del mondo in sottomatrici indipendenti e lo scarto preventivo a livello CPU degli elementi non visibili.
 
 ## Comandi per il Giocatore
 I controlli di navigazione tridimensionale rimangono invariati:
@@ -23,7 +23,7 @@ I controlli di navigazione tridimensionale rimangono invariati:
 
 ## Problematiche Affrontate e Soluzioni Ingegneristiche
 
-### 1. Il Vincolo del Monolito: Impossibilità di Scarto Parziale
+### 1. Il Vincolo: Impossibilità di Scarto Parziale
 Inviare il terreno tramite un solo Vertex Array Object (VAO) impedisce ad OpenGL di effettuare ottimizzazioni granulari: o si disegna tutto il ghiacciaio o non si disegna nulla. Per preparare il motore ad accogliere una risoluzione geografica chilometrica senza saturare la GPU, era necessario spezzare la griglia.
 
 **Soluzione (Chunking):**
@@ -51,7 +51,7 @@ Prima di eseguire il `glDrawElements` di una piastrella di terreno, la CPU esegu
 Per validare l'efficacia dell'algoritmo di culling, era necessario quantificare visivamente lo scarto computazionale in tempo reale.
 
 **Soluzione:**
-È stato introdotto un contatore incrementale `chunksDrawn` accoppiato a un timer asincrono gestito tramite `sf::Clock`. Ogni secondo (1.0s), il motore stampa sul terminale di debug il numero esatto di chunk inviati a schermo rispetto al totale complessivo. Orientando la telecamera verso i costoni rocciosi isolati o verso lo spazio vuoto, il counter mostra una riduzione drastica dei chunk attivi (es. 12 su 48), certificando il successo dell'ottimizzazione in tempo reale.
+È stato introdotto un contatore incrementale `chunksDrawn` accoppiato a un timer asincrono gestito tramite `sf::Clock`. Ogni secondo (1.0s), il motore stampa sul terminale di debug il numero esatto di chunk inviati a schermo rispetto al totale complessivo. Orientando la telecamera verso i costoni rocciosi isolati o verso lo spazio vuoto, il counter mostra una riduzione drastica dei chunk attivi (es. 92 su 144), certificando il successo dell'ottimizzazione in tempo reale.
 
 ---
 

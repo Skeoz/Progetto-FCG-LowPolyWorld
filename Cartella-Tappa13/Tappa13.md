@@ -8,10 +8,10 @@ Per avviare questa specifica tappa, impostare sia il *Build Target* che il *Laun
 ## Obiettivo
 L'obiettivo della **Tappa 13** è l'introduzione di un sistema di telemetria e visualizzazione dati in tempo reale direttamente sovrimpresso sullo schermo (**HUD - Head-Up Display**). 
 
-Per evitare dipendenze da librerie esterne o il caricamento di file di font pesanti e non portabili (come i file .ttf), l'architettura è stata estesa introducendo una pipeline di **rendering vettoriale dinamico**. Disattivando temporaneamente il test di profondità ed eseguendo uno switch controllato tra la proiezione prospettica 3D e una **proiezione ortografica 2D in pixel**, il motore è ora in grado di disegnare stringhe alfanumericamente complesse (FPS, coordinate GPS e fase del ciclo solare) mantenendo le prestazioni vicine allo zero overhead.
+Per evitare dipendenze da librerie esterne o il caricamento di file di font pesanti e non portabili (come i file .ttf), l'architettura è stata estesa introducendo una pipeline di **rendering vettoriale dinamico**. Disattivando temporaneamente il test di profondità ed eseguendo uno switch controllato tra la proiezione prospettica 3D e una **proiezione ortografica 2D in pixel**, il motore è ora in grado di disegnare stringhe alfanumericamente complesse (FPS, coordinate GPS e fase del ciclo solare).
 
 ## Comandi per il Giocatore
-I controlli di volo e interazione con l'ambiente sono stabili:
+I controlli di volo e interazione con l'ambiente sono gli stessi:
 * **Mouse**: Orientamento dello sguardo (Yaw e Pitch).
 * **W / S / A / D**: Movimento direzionale (velocità fissata a 50.0f unità/secondo).
 * **Spazio / Shift Sinistro**: Traslazione verticale (coordinata Z vincolata dal terreno).
@@ -24,7 +24,7 @@ I controlli di volo e interazione con l'ambiente sono stabili:
 ## Problematiche Affrontate e Soluzioni Ingegneristiche
 
 ### 1. Il Crash di Cleanup dei Buffer Orfani
-Durante la transizione dall'architettura a griglia singola a quella suddivisa in **Chunk** (Tappa 11 e 12), il codice di rilascio delle risorse a fine esecuzione chiamava ciecamente `glDeleteVertexArrays(1, &VAO)` su puntatori globali ormai rimossi. Questo causava un errore bloccante del compilatore o un crash silente del driver grafico alla chiusura del programma (Memory Leak video).
+Durante la transizione dall'architettura a griglia singola a quella suddivisa in **Chunk** (Tappa 11 e 12), il codice di rilascio delle risorse a fine esecuzione chiamava ciecamente `glDeleteVertexArrays(1, &VAO)` su puntatori globali ormai rimossi. Questo causava un errore bloccante del compilatore o un crash silente del driver grafico alla chiusura del programma.
 
 **Soluzione:**
 È stata eliminata la vecchia riga di rimozione statica e sostituita con un ciclo iterativo deterministico che scorre il vettore dei chunk attivi, liberando la memoria video in modo speculare a come era stata allocata:
@@ -50,12 +50,11 @@ if (fpsTimer >= 0.5f) {
 }
 
 ### 3. Posizione spawn  e l'Estetica dell'HUD
-Nascere troppo vicini al suolo toglieva il senso di scala chilometrica del ghiacciaio (Z-Scale a 0.4f e quota neve a 200.0). Inoltre, il primo prototipo di HUD con font verde neon stile fosfori anni '90 creava un contrasto cromatico sgradevole e poco professionale con l'ambiente naturale circostante.
+Nascere troppo vicini al suolo toglieva il senso di scala chilometrica del ghiacciaio. Inoltre, il primo prototipo di HUD con font verde neon creava un contrasto cromatico sgradevole e poco professionale con l'ambiente naturale circostante.
 
 **Soluzione:**
-* **Spawn:** La coordinata Z iniziale in `cameraPos` è stata elevata a **400.0f**, consentendo un inserimento in quota da "volo d'aquila" per apprezzare l'orizzonte geometrico profondo (Far Plane a 1500.0f).
+* **Spawn:** La coordinata Z iniziale in `cameraPos` è stata elevata a **400.0f**, consentendo un inserimento in quota per apprezzare l'orizzonte geometrico (Far Plane a 1500.0f).
 * **Cromia:** Il colore dei vettori dell'HUD è stato modificato impostando una tonalità **Ambra** (`glm::vec3(1.0f, 0.6f, 0.0f)`), che richiama la strumentazione dei cockpit reali e dei droni professionali, garantendo massima leggibilità sia sulla neve che durante la notte.
-* **Rimozione Mirino:** È stata rimossa qualsiasi traccia di mirino centrale per mantenere la visuale pulita e focalizzata sul paesaggio.
 
 ### 4. Mappatura Semantica del Ciclo Giorno/Notte
 Mostrare solo l'angolo numerico del sole non era intuitivo per l'utente. C'era bisogno di tradurre la rotazione algebrica della luce direzionale in concetti testuali comprensibili.
