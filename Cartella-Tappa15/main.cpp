@@ -604,7 +604,7 @@ int main() {
         window.display();
     }
 
-    // CLEANUP CORRETTO CHUNK E BUFFER MEMORIA
+    // CLEANUP CHUNK E BUFFER MEMORIA
     for (auto& chunk : terrainChunks) { glDeleteVertexArrays(1, &chunk.VAO); glDeleteBuffers(1, &chunk.VBO); glDeleteBuffers(1, &chunk.EBO); }
     glDeleteVertexArrays(1, &skyboxVAO); glDeleteBuffers(1, &skyboxVBO);
     glDeleteVertexArrays(1, &houseVAO); glDeleteBuffers(1, &houseVBO);
