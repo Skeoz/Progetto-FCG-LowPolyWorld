@@ -122,7 +122,7 @@ void getSegmentsForChar(char c, std::vector<glm::vec2>& lines, float x, float y,
 
 // ==========================================
 // VARIABILI GLOBALI DELLA TELECAMERA
-// Posizione e orientamento della telecamera con visione di scala massiccia
+// Posizione e orientamento della telecamera con visione di scala aumentata
 // Per Tappa13: i valori sono 100x più grandi rispetto alle tappe precedenti
 // ==========================================
 glm::vec3 cameraPos   = glm::vec3(0.0f, -400.0f, 400.0f);
@@ -191,7 +191,7 @@ bool loadOBJ(const std::string& path, std::vector<Vertex>& out_vertices) {
 
 // ==========================================
 // SHADER DEL TERRENO CON ILLUMINAZIONE ADATTATA PER SCALA MASSICCIA
-// I parametri di attenuazione della luce puntiforme sono ridotti (0.012, 0.0008) per gestire distanze enormi
+// I parametri di attenuazione della luce puntiforme sono ridotti (0.012, 0.0008) per gestire grosse distanze 
 // Le soglie di colorazione del bioma sono scalate (200, 300) da (0.02, 0.12)
 // ==========================================
 const char* vertexShaderSource = R"(#version 410 core
@@ -209,7 +209,7 @@ void main() {
     vec3 lightDirPt = normalize(pointLightPos - FragPos); float diffPt = max(dot(norm, lightDirPt), 0.0); 
     float dist = length(pointLightPos - FragPos);
     
-    // Illuminazione adattata per scala massiccia: attenuazione ridotta per distanze enormi
+    // Illuminazione adattata per scala : attenuazione ridotta per grosse distanze 
     float att = 1.0 / (1.0 + 0.012 * dist + 0.0008 * (dist * dist)); vec3 ptRes = pointLightColor * diffPt * att;
     
     // Soglie di colorazione del bioma scalate per la nuova scala 1000x
@@ -281,7 +281,7 @@ int main() {
     // ==========================================
     // 1. CARICAMENTO E SCALA DEL DEM
     // Tappa13 introduce una SCALA 1000x rispetto alle tappe precedenti
-    // Questo permette di esplorare il terreno su distanze massive
+    // Questo permette di esplorare il terreno su grosse distanze 
     // ==========================================
     const char* filepath = "../Cartella-risorse/aletsch_32T.asc";
     Dem ghiacciaio(filepath);
@@ -293,7 +293,7 @@ int main() {
     int cols = (W + step - 1) / step;
     int rows = (H + step - 1) / step;
 
-    // FATTORE DI SCALA MASSICCIA: 1000x
+    // FATTORE DI SCALA: 1000x
     // Tutti i valori spaziali sono moltiplicati per questo fattore
     float mapScale = 1000.0f;
 
@@ -329,9 +329,8 @@ int main() {
     }
 
     // ==========================================
-    // GROUND CLAMPING: NUOVA FUNZIONE DI TAPPA 13
+    // GROUND CLAMPING: NUOVA FUNZIONE TAPPA 13
     // Limita la telecamera a stare al di sopra del terreno (1.78 unità)
-    // Necessario con scala massiccia per evitare di cadere attraverso la geometria
     // ==========================================
     auto getTerrainHeight = [&](float worldX, float worldY) -> float {
         // Conversione da coordinate mondo a coordinate griglia normalizzate
@@ -341,7 +340,7 @@ int main() {
         if (normX < 0.0f || normX >= 1.0f || normY < 0.0f || normY >= 1.0f)
             return -1000.0f;
 
-        // Interpolazione bilineare per altitudine precisa alla posizione mondiale
+        // Interpolazione bilineare per altitudine precisa alla posizione globale
         float gridX = normX * (cols - 1);
         float gridY = normY * (rows - 1);
         int x0 = (int)gridX;
@@ -373,7 +372,7 @@ int main() {
     glEnable(GL_DEPTH_TEST);
 
     // FASE 3: CREAZIONE CHUNK CON FRUSTUM CULLING
-    // Suddivisione del terreno massiccia in tasselli per ottimizzazione del rendering
+    // Suddivisione del terreno in porzioni per ottimizzazione del rendering
     std::vector<Chunk> terrainChunks;
     int CHUNK_SIZE = 64;  // Dimensione in vertici per lato del chunk 
     for (int startY = 0; startY < rows - 1; startY += CHUNK_SIZE - 1) {
@@ -664,7 +663,7 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // Costruzione delle matrici di trasformazione
-        // Far plane ampliato a 1500.0f per gestire distanze massicce
+        // Far plane ampliato a 1500.0f per gestire grosse distanze
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)window.getSize().x / window.getSize().y, 0.1f, 1500.0f);
         glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         glm::mat4 viewProj = projection * view; 

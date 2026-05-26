@@ -28,7 +28,7 @@ struct AABB {
     glm::vec3 maxP;  // Spigolo superiore della scatola
 };
 
-// CHUNK: Una piastrella di terreno indipendente con buffer GPU e bounding box
+// CHUNK: Una porzione di terreno indipendente con buffer GPU e bounding box
 struct Chunk { 
     unsigned int VAO, VBO, EBO;  // Identificatori buffer GPU
     int indexCount;              // Numero di indici nel chunk
@@ -84,9 +84,9 @@ bool isAABBVisible(const AABB& aabb, const Frustum& f) {
 }
 
 // VARIABILI GLOBALI DELLA TELECAMERA
-// Posizione e orientamento della telecamera con visione di scala massiccia
+// Posizione e orientamento della telecamera con visione di scala 
 // Per Tappa12: i valori sono 100x più grandi rispetto alle tappe precedenti
-glm::vec3 cameraPos   = glm::vec3(0.0f, -400.0f, 200.0f);  // Posizione iniziale: visione aerea massiccia
+glm::vec3 cameraPos   = glm::vec3(0.0f, -400.0f, 200.0f);  // Posizione iniziale: visione aerea 
 glm::vec3 cameraFront = glm::vec3(0.0f, 1.0f, -0.2f);
 glm::vec3 cameraUp    = glm::vec3(0.0f, 0.0f, 1.0f);
 float yaw = 90.0f; 
@@ -94,7 +94,7 @@ float pitch = -10.0f;
 bool isMouseGrabbed = true; 
 bool firstMouse = true;
 // VELOCITÀ SCALATA: 50 unità al secondo (comparato con 0.5 delle tappe precedenti)
-// Questo mantiene il rapporto di movimento proporzionale alla scala massiccia
+// Questo mantiene il rapporto di movimento proporzionale alla scala 
 float cameraSpeed = 50.0f; 
 float yawSensitivity = 0.1f; 
 float pitchSensitivity = 0.08f;
@@ -150,7 +150,7 @@ bool loadOBJ(const std::string& path, std::vector<Vertex>& out_vertices) {
 }
 
 // SHADER DEL TERRENO CON ILLUMINAZIONE ADATTATA PER SCALA MASSICCIA
-// I parametri di attenuazione della luce puntiforme sono ridotti (0.012, 0.0008) per gestire distanze enormi
+// I parametri di attenuazione della luce puntiforme sono ridotti (0.012, 0.0008) per gestire grosse distanze
 // Le soglie di colorazione del bioma sono scalate (200, 300) da (0.02, 0.12)
 const char* vertexShaderSource = R"(#version 410 core
 layout (location=0) in vec3 aPos; layout (location=1) in vec3 aNormal;
@@ -216,7 +216,7 @@ float skyboxVertices[] = {
 int main() {
     // CARICAMENTO E SCALA DEL DEM
     // Tappa12 introduce una SCALA 1000x rispetto alle tappe precedenti
-    // Questo permette di esplorare il terreno su distanze massive
+    // Questo permette di esplorare il terreno su grosse distanze
     const char* filepath = "../Cartella-risorse/aletsch_32T.asc";
     Dem ghiacciaio(filepath);
     int W = ghiacciaio.header.width; 
@@ -306,7 +306,7 @@ int main() {
     glEnable(GL_DEPTH_TEST);
 
     // FASE 3: CREAZIONE CHUNK CON FRUSTUM CULLING
-    // Suddivisione del terreno massiccia in tasselli per ottimizzazione del rendering
+    // Suddivisione del terreno in chunk per ottimizzazione del rendering
     std::vector<Chunk> terrainChunks;
     int CHUNK_SIZE = 64;  // Dimensione in vertici per lato del chunk 
     for (int startY = 0; startY < rows - 1; startY += CHUNK_SIZE - 1) {
@@ -540,7 +540,7 @@ int main() {
 
         // ATTIVAZIONE DELLA LUCE DEL BIVACCO
         float bivAct = glm::smoothstep(0.1f, -0.1f, sH); 
-        // Moltiplicatore di intensità aumentato a 3.0f per la scala massiccia
+        // Moltiplicatore di intensità aumentato a 3.0f per la scala 
         glm::vec3 bivColor = glm::vec3(1.0, 0.55, 0.1) * bivAct * 3.0f;
         
         // OFFSET VERTICALE SCALATO: 8.0f per appoggiare il bivacco sulla neve
@@ -553,7 +553,7 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // Costruzione delle matrici di trasformazione
-        // Far plane ampliato a 1500.0f per gestire distanze massicce
+        // Far plane ampliato a 1500.0f per gestire grosse distanze 
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)window.getSize().x / window.getSize().y, 0.1f, 1500.0f);
         glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         glm::mat4 viewProj = projection * view; 
@@ -599,7 +599,7 @@ int main() {
             // Rotazione: correzione dell'orientamento del modello OBJ
             hModel = glm::rotate(hModel, glm::radians(90.0f), glm::vec3(1, 0, 0)); 
             
-            // Scaling massiccia: 9.0f unità per la scala 1000x
+            // Scaling : 9.0f unità per la scala 1000x
             hModel = glm::scale(hModel, glm::vec3(9.0f)); 
             
             glUniformMatrix4fv(glGetUniformLocation(solidProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
