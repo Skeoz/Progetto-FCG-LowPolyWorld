@@ -194,16 +194,16 @@ void main() {
     // Permette alla luce del bivacco di viaggiare molto più lontano prima di estinguersi
     float att = 1.0 / (1.0 + 0.002 * distToLight + 0.0005 * (distToLight * distToLight)); vec3 ptRes = pointLightColor * diffPt * att;
     
-    vec3 cV = vec3(0.25, 0.45, 0.15); vec3 cR = vec3(0.45, 0.43, 0.4); vec3 cS = vec3(0.9, 0.95, 1.0);   
+    vec3 cV = vec3(0.25, 0.45, 0.15); vec3 cR = vec3(0.28, 0.28, 0.28); vec3 cS = vec3(0.9, 0.95, 1.0);
     
     // Quota Neve innalzata drasticamente (transizione tra 1250 e 2000) per rispettare l'asse Z pompato
-    vec3 tC = (FragPos.z < 1250.0) ? mix(cV, cR, smoothstep(-50.0, 1250.0, FragPos.z)) : mix(cR, cS, smoothstep(1250.0, 2000.0, FragPos.z));
+    vec3 tC = (FragPos.z < 1400.0) ? mix(cV, cR, smoothstep(-50.0, 1400.0, FragPos.z)) : mix(cR, cS, smoothstep(1400.0, 2000.0, FragPos.z));
     vec3 finalTerrainColor = (ambientColor + dirRes + ptRes) * tC;
 
     // --- MATEMATICA DEPTH FOG (TAPPA 15) ---
     float fogDist = length(viewPos - FragPos);
-    // Densità abbattuta a 0.00035 per sbloccare la visibilità continentale (Far Plane 8000)
-    float fogDensity = 0.00035; 
+    // Densità a 0.00025 
+    float fogDensity = 0.00025; 
     float fogFactor = exp(-pow(fogDist * fogDensity, 2.0));
     fogFactor = clamp(fogFactor, 0.0, 1.0);
     
@@ -248,9 +248,9 @@ void main() {
     float diff = max(dot(normalize(FaceNormal), normalize(lightDir)), 0.0); 
     vec3 objColor = (ambientColor + vec3(diff)) * texture(tex, TexCoords).rgb; 
     
-    // Stessa equazione atmosferica del terreno: densità a 0.00035 per evitare l'effetto buco nero
+    // Stessa equazione atmosferica del terreno: densità a 0.00025 per evitare l'effetto nero
     float fogDist = length(viewPos - FragPos);
-    float fogDensity = 0.00035; 
+    float fogDensity = 0.00025; 
     float fogFactor = exp(-pow(fogDist * fogDensity, 2.0));
     fogFactor = clamp(fogFactor, 0.0, 1.0);
     

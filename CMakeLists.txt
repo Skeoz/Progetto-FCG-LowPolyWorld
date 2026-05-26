@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(LowPolyWorld LANGUAGES C CXX)
-
 set(CMAKE_POLICY_VERSION_MINIMUM 3.5 CACHE STRING "Bypassa blocco vecchie policy" FORCE)
+
+set(CMAKE_WARN_DEPRECATED OFF CACHE BOOL "Disabilita avvisi di deprecazione" FORCE)
+
+project(LowPolyWorld LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
