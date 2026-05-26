@@ -118,7 +118,7 @@ const char* skyboxVertexShader = R"(
         // Questo garantisce che lo skybox rimane sempre dietro a tutti gli altri elementi
         gl_Position = pos.xyww;
     }
-)"
+)";
 
 // Fragment Shader dello Skybox: Disegna il gradiente di cielo, sole e stelle procedurali
 // Il shader utilizza la direzione del raggio per campionare il cielo e applicare effetti
