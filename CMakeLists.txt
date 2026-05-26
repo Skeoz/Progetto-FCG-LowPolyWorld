@@ -2,278 +2,92 @@ cmake_minimum_required(VERSION 3.16)
 
 project(LowPolyWorld LANGUAGES C CXX)
 
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5 CACHE STRING "Bypassa blocco vecchie policy" FORCE)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
+# =========================================================================
+# 1. LIBRERIE STANDARD C++
+# =========================================================================
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libgcc -static-libstdc++")
+
+# =========================================================================
+# 2. COMPILAZIONE STATICA (SFML Dentro eseguibili)
+# =========================================================================
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build static libraries" FORCE)
+
 find_package(OpenGL REQUIRED)
+include(FetchContent)
 
-set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/librerie/SFML/lib/cmake/SFML")
-find_package(SFML 3.0 COMPONENTS Graphics Window System REQUIRED)
+# =========================================================================
+# 3. DOWNLOAD AUTOMATICO DELLE DIPENDENZE (FETCHCONTENT)
+# =========================================================================
+message(STATUS "Scaricamento di GLM in corso...")
+FetchContent_Declare(
+    glm
+    GIT_REPOSITORY https://github.com/g-truc/glm.git
+    GIT_TAG 1.0.3
+    GIT_SHALLOW ON
+)
+FetchContent_MakeAvailable(glm)
 
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/librerie/SFML/bin")
-    file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/librerie/SFML/bin/" DESTINATION "${CMAKE_BINARY_DIR}")
-endif()
+message(STATUS "Scaricamento di SFML in corso...")
+FetchContent_Declare(
+    SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 3.0.0
+    GIT_SHALLOW ON
+)
+FetchContent_MakeAvailable(SFML)
 
-set(tappa "Tappa01")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
+# =========================================================================
+# 4. GENERAZIONE AUTOMATICA DELLE 15 TAPPE
+# =========================================================================
+foreach(i RANGE 1 15)
+    # Formattazione nome a due cifre (Tappa01, Tappa02...)
+    if(i LESS 10)
+        set(tappa "Tappa0${i}")
+    else()
+        set(tappa "Tappa${i}")
+    endif()
 
-set(tappa "Tappa02")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
+    # Controlliamo che la cartella della tappa esista davvero nel progetto
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/Cartella-${tappa}")
+        
+        # File base sempre presenti
+        set(SOURCES 
+            Cartella-${tappa}/main.cpp 
+            librerie/glad/src/glad.c
+        )
 
-set(tappa "Tappa03")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
+        # Dalla Tappa 03 in poi, il ghiacciaio entra in gioco
+        if(i GREATER_EQUAL 3)
+            list(APPEND SOURCES Cartella-${tappa}/dem.cc)
+        endif()
 
-# --- CONFIGURAZIONE DELLA TAPPA 04 ---
-set(tappa "Tappa04")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
+        add_executable(${tappa} ${SOURCES})
 
-set(tappa "Tappa05")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
+        # Includiamo GLAD locale e GLM scaricato
+        target_include_directories(${tappa} PRIVATE 
+            librerie/glad/include
+            ${glm_SOURCE_DIR}
+        )
 
-set(tappa "Tappa06")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
+        # Linkiamo SFML (ora statico) e OpenGL
+        target_link_libraries(${tappa} PRIVATE 
+            SFML::Graphics 
+            SFML::Window 
+            SFML::System 
+            OpenGL::GL
+        )
+    endif()
+endforeach()
 
-# --- CONFIGURAZIONE DELLA TAPPA 07 ---
-set(tappa "Tappa07")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
-
-# --- CONFIGURAZIONE DELLA TAPPA 08 ---
-set(tappa "Tappa08")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
-
-# --- CONFIGURAZIONE DELLA TAPPA 09 ---
-set(tappa "Tappa09")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
-
-# --- CONFIGURAZIONE DELLA TAPPA 10 ---
-set(tappa "Tappa10")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
-
-# --- CONFIGURAZIONE DELLA TAPPA 11 ---
-set(tappa "Tappa11")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
-
-# --- CONFIGURAZIONE DELLA TAPPA 12 ---
-set(tappa "Tappa12")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
-
-# --- CONFIGURAZIONE DELLA TAPPA 13 ---
-set(tappa "Tappa13")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
-
-# --- CONFIGURAZIONE DELLA TAPPA 14 ---
-set(tappa "Tappa14")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
-)
-
-# --- CONFIGURAZIONE DELLA TAPPA 15 ---
-set(tappa "Tappa15")
-add_executable(${tappa} 
-    Cartella-${tappa}/main.cpp 
-    Cartella-${tappa}/dem.cc
-    librerie/glad/src/glad.c
-)
-target_include_directories(${tappa} PRIVATE 
-    librerie/glad/include
-    librerie/glm
-)
-target_link_libraries(${tappa} PRIVATE 
-    SFML::Graphics 
-    SFML::Window 
-    SFML::System 
-    OpenGL::GL
+add_custom_command(
+    TARGET Tappa15 POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    "${CMAKE_CURRENT_SOURCE_DIR}/Cartella-risorse"
+    "$<TARGET_FILE_DIR:Tappa15>/Cartella-risorse"
 )
