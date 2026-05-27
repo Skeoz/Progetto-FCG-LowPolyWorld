@@ -244,7 +244,7 @@ int main() {
         }
 
         // CONTROLLI DI MOVIMENTO DELLA TELECAMERA DA TASTIERA
-        // Implementazione di uno schema di controllo simile a Minecraft Creative Mode con 6 gradi di libertà
+        // Implementazione di uno schema di controllo con 6 gradi di libertà
         if (isMouseGrabbed && window.hasFocus()) {
             float velocity = cameraSpeed * deltaTime;
             // Vettore perpendicolare al piano di vista per i movimenti laterali

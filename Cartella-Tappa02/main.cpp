@@ -55,7 +55,7 @@ int main() {
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
 
-    // Pulizia: gli shader compilati sono nel programma, possiamo scartare i file originali
+    // Pulizia: gli shader compilati sono nel programma, si scartano i file originali
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 

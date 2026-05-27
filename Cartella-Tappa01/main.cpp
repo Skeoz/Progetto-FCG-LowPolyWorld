@@ -20,7 +20,7 @@ int main() {
         return -1;
     }
 
-    // Impostazioni grande area disegno OpenGL
+    // Impostazioni area disegno OpenGL
     glViewport(0, 0, 800, 600);
 
     // Game Loop (Ciclo principale)
