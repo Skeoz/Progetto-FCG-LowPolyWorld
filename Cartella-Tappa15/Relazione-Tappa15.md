@@ -66,6 +66,20 @@ L'assenza di un limite di framerate forzava la GPU a elaborare frame ridondanti,
 **Soluzione:**
 Il motore di rendering è stato ancorato al refresh rate del monitor tramite l'attivazione della sincronizzazione verticale (VSync), abbattendo il costo computazionale a regime. Contestualmente, la telemetria dell'HUD vettoriale è stata espansa per campionare e stampare a schermo lo stato in tempo reale del ciclo solare ("TEMPO: SCORRE" o "TEMPO: IN PAUSA"), garantendo al giocatore un controllo totale sulle variabili ambientali.
 
+### 6. Ottimizzazione della Leggibilità del Codice
+Durante la fase di revisione finale, il codice è stato sottoposto a un **refactoring di presentazione** volto a migliorarne la comprensibilità.
+
+**Modifiche Applicate:**
+* **Shader GLSL**: Convertiti da stringhe minificate (150+ caratteri per riga) a formato multi-riga con indentazione coerente, evidenziando sezioni logiche (illuminazione, coloring, effetti atmosferici).
+* **Allocazione Buffer GPU**: Riorganizzati da catene di statement a sequenze lineari (1-2 operazioni per riga), con commentari esplicativi per ogni fase di setup (compilazione shader, skybox, HUD, bivacco).
+* **Game Loop**: Suddiviso in sezioni ben delimitate:
+  - Controlli telecamera (mouse + WASD)
+  - Collisioni + Ground Clamping
+  - Ciclo giorno/notte con interpolazioni di colore
+  - Rendering (Skybox → Terreno frustum-culled → Bivacco → HUD)
+* **Funzioni Critiche**: Rese esplicite con spazi bianchi significativi (generazione chunk, bilinear interpolation, frustum extraction).
+* **Dichiarazioni di Sezione**: Aggiunti delimitatori visivi (`========================================`) per facilitare la navigazione
+
 ---
 
 ## Flusso della Pipeline 
