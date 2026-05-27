@@ -3,7 +3,7 @@
 **Autore:** Andrea Peri 5415544  
 **Corso:** Fondamenti di Computer Grafica
 
-Questo progetto implementa un motore di rendering 3D scritto in C++ moderno (C++17) e OpenGL 4.1. L'obiettivo finale (Tappa 15) è l'esplorazione interattiva in prima persona di un modello digitale di elevazione (DEM) su scala di 5 km quadrati del ghiacciaio dell'Aletsch, completo di ciclo giorno/notte, nebbia atmosferica basata sulla distanza, frustum culling spaziale e fisica di collisione (ground clamping e push-back per i modelli solidi).
+Questo progetto implementa un motore di rendering 3D scritto in C++ e OpenGL 4.1. L'obiettivo finale (Tappa 15) è l'esplorazione interattiva in prima persona di un modello digitale di elevazione (DEM) su scala di 5 km quadrati del ghiacciaio dell'Aletsch, completo di ciclo giorno/notte, nebbia atmosferica basata sulla distanza, frustum culling spaziale e fisica di collisione (ground clamping e push-back per i modelli solidi).
 
 ## Architettura e Dipendenze
 Il progetto è stato ingegnerizzato per essere **plug-and-play**. Non è necessario scaricare manualmente alcuna libreria esterna, a patto di avere un ambiente di sviluppo C++ standard configurato (es. MSYS2/MinGW su Windows o GCC/Clang su Linux) e una connessione a internet.
