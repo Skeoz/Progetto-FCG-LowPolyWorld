@@ -44,7 +44,7 @@ Per risolvere il problema e stabilizzare l'impatto visivo si è intervenuti sul 
 Durante le fasi di debugging visivo o nella necessità di catturare screenshot della mesh in specifiche condizioni di luce (es. per allegare documentazione sul tramonto o sul mezzogiorno perfetto), rincorrere il movimento orbitale continuo della luce direzionale risultava impraticabile, forzando lo sviluppatore a riavviare continuamente l'applicazione sperando di beccare il frame corretto.
 
 ### Analisi e Soluzione
-Per svincolare l'ispezione della scena dallo scorrere del tempo reale, è stata implementata una modifica architetturale nel calcolo del tempo della simulazione. Si è rimosso il tracciamento basato sul clock assoluto di sistema ed è stata introdotta una variabile di stato booleana `isTimePaused` legata al tasto **P**. 
+Per svincolare l'ispezione della scena dallo scorrere del tempo reale, è stata implementata una modifica architetturale nel calcolo del tempo della simulazione. Si è rimosso il tracciamento basato sul clock assoluto di sistema ed è stata introdotta una variabile di stato booleana `isTimePaused` legata al tasto **P**.
 
 Nel loop di rendering, l'angolo di inclinazione del sole (`currentSunAngle`) viene ora incrementato tramite l'accumulo del `deltaTime` hardware solo se il flag di pausa è disattivato:
 ```cpp

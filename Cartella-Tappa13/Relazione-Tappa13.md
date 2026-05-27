@@ -49,7 +49,7 @@ if (fpsTimer >= 0.5f) {
     fpsTimer = 0.0f;
 }
 
-### 3. Posizione spawn  e l'Estetica dell'HUD
+### 3. Posizione spawn e l'Estetica dell'HUD
 Nascere troppo vicini al suolo toglieva il senso di scala chilometrica del ghiacciaio. Inoltre, il primo prototipo di HUD con font verde neon creava un contrasto cromatico sgradevole e poco professionale con l'ambiente naturale circostante.
 
 **Soluzione:**

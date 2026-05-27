@@ -21,7 +21,7 @@ A differenza delle tappe precedenti, la scena è ora completamente esplorabile i
 ---
 
 ## Problematica 1: Loop degli Eventi e "Ghost Drifting"
-Nelle prime iterazioni, la telecamera tendeva a muoversi in modo autonomo ("ghost drifting") anche quando il mouse era fermo. 
+Nelle prime iterazioni, la telecamera tendeva a muoversi in modo autonomo ("ghost drifting") anche quando il mouse era fermo.
 
 ### Analisi e Soluzione
 Il problema risiedeva nell'uso dell'evento `sf::Event::MouseMoved` all'interno del loop degli eventi. L'istruzione utilizzata per mantenere il cursore bloccato al centro dello schermo (`sf::Mouse::setPosition`) veniva interpretata dal sistema operativo come un *nuovo* movimento del mouse, innescando un ciclo di feedback infinito tra lettura e riposizionamento.
@@ -35,8 +35,8 @@ Durante i test di navigazione sono emersi due problemi di ergonomia nei controll
 2. Il movimento verticale (Pitch) risultava eccessivamente nervoso e ipersensibile rispetto alla rotazione orizzontale (Yaw), rendendo difficile inquadrare dettagli vicini.
 
 ### Soluzione Adottata
-L'inversione dell'asse X è stata risolta banalmente passando da una somma a una sottrazione nel calcolo dell'angolo di Yaw.
-Per la sensibilità, si è deciso di disaccoppiare matematicamente le velocità di rotazione sui due assi, dichiarando variabili globali separate:
+L'inversione dell'asse X è stata risolta modificando il calcolo dell'angolo di Yaw da una somma a una sottrazione.
+Per la sensibilità, è stato deciso di disaccoppiare matematicamente le velocità di rotazione sui due assi, dichiarando variabili globali separate:
 ```cpp
 float yawSensitivity   = 0.1f;
 float pitchSensitivity = 0.08f;

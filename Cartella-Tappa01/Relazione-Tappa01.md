@@ -1,14 +1,3 @@
-# Istruzioni di Build Generali
-
-Il progetto è gestito interamente tramite **CMake**. Tutte le dipendenze necessarie (SFML 3.0, GLAD, GLM) sono state incluse localmente nel progetto utilizzando percorsi relativi. Questo garantisce che la compilazione vada a buon fine su qualsiasi macchina senza richiedere installazioni di librerie a livello di sistema.
-
-Per compilare e avviare il progetto:
-1. Aprire la cartella radice del progetto.
-2. Utilizzare CMake per configurare il progetto e generare i file di build.
-3. Selezionare il target desiderato
-4. Compilare ed eseguire. Il file `CMakeLists.txt` è stato istruito per gestire automaticamente le dipendenze a runtime.
-
----
 
 # Tappa 01: Inizializzazione Finestra e Contesto OpenGL
 
@@ -21,7 +10,9 @@ In questa fase non sono previsti comandi interattivi per l'utente, eccezione fat
 ## Problemi Riscontrati e Soluzioni
 Durante la primissima fase di test, il codice compilava correttamente generando l'eseguibile, ma all'avvio il programma andava in crash senza mostrare alcuna finestra. 
 Analizzando il problema, è emerso che l'eseguibile non riusciva a trovare le librerie dinamiche (i file `.dll` di SFML) necessarie per il runtime, poiché queste si trovavano in una cartella separata rispetto all'output della build.
-Invece di costringere l'utente a copiare manualmente i file a ogni compilazione, ho risolto il problema alla radice intervenendo sul sistema di build. Ho inserito un comando `if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/librerie/SFML/bin")` all'interno del `CMakeLists.txt`: in questo modo,nel caso non li trovasse, CMake copia in automatico tutte le `.dll` necessarie direttamente nella cartella di destinazione dell'eseguibile, garantendo un avvio immediato e "plug-and-play".
+Invece di costringere l'utente a copiare manualmente i file a ogni compilazione, è stato risolto il problema alla radice intervenendo sul sistema di build. È stato inserito un comando `if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/librerie/SFML/bin")` all'interno del `CMakeLists.txt`: in questo modo, nel caso non le trovasse, CMake copia in automatico tutte le `.dll` necessarie direttamente nella cartella di destinazione dell'eseguibile, garantendo un avvio immediato e "plug-and-play".**
+
+**Soluzione in seguito risultata superflua per via del nuovo CMakeList,il quale forza SFML a fondersi dentro l'eseguibile non avendo più file .dll.
 
 ## Screenshot
 ![Finestra Iniziale](screenshot1.png)
